@@ -1,0 +1,163 @@
+body {
+    background: #babcbd;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+*{
+    font-family: 'Montserrat';
+    box-sizing: padding-box;
+}
+
+form {
+    display: flexbox;
+    width: 1000px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 20px;
+    background: #e3f2fd;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input {
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    float: right;
+    background: #2196f3;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+
+input[type=submit]:hover {
+    opacity: .7;
+}
+
+label {
+    color: rgb(92, 92, 92);
+    font-size: 18px;
+    padding: 10px;
+}
+
+button {
+    display: inline-block;
+    background: #2196f3;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+
+button:hover{
+    opacity: .6;
+}
+
+.error {
+   color: #ff0000;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+button {
+    background: #2196f3;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    border-radius: 0px;
+    margin-right: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+button:hover{
+    opacity: .7;
+}
+
+#container{
+    text-align: center;
+}
+
+#entrypage {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #babcbd;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #babcbd;
+    border: 1px;
+}
+
+li a:hover {
+    background-color: #9fa2a3;
+}
+
+.button {
+    background: #2196f3;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    border-radius: 0px;
+    margin-right: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+.button:hover {
+    opacity: .7;
+}
+
+.loginform {
+    display: flexbox;
+    width: 500px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 20px;
+    background: #e3f2fd;
+    border-radius: 10px;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+}
