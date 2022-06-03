@@ -8,15 +8,16 @@ include("config.php");
 <html>
     <head>
         <title>Welcome</title>
-        <link rel="stylesheet" type="text/css" href="Styles.css"/>
     </head>
 
-    <div id="entrypage">
-        <h1>Welcome</h1>
-
-        <div id="container">
-            <a href="login.php" class="button">Login</a>
-            <a href="register.php" class="button">Register</a>
+    <div class="splash">
+        <div class="insplash">
+            <span style="font-size: 50px">Welcome</span>
+            <br>
+            <button type="button"><a href="login.php" style="font-size: 16px;">Login</a></button>
+            <button type="button"><a href="register.php" style="font-size: 16px;">Register</a></button>
         </div>
+
     </div>
+
 </html>

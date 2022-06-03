@@ -110,7 +110,6 @@ if(isset($_POST["button_register"])){
 <html>
     <head>
         <title>Registration</title>
-        <link rel="stylesheet" type="text/css" href="Styles.css"/>
     </head>
     <br>
     <br>
@@ -204,6 +203,10 @@ if(isset($_POST["button_register"])){
                         <input type="submit" name="button_register" value="Register"/>
                     </td>
                 </tr>
+
+                <br>
+
+                <span style="font-size: 12px; font-weight: 300">Already have an account? Login <a href="login.php">here</a>.</span>
         </fieldset>
     </form>
 </html>

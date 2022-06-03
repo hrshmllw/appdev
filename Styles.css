@@ -1,13 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
+
 body {
-    background: #babcbd;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+    background-color: #babcbd;
 }
 
 *{
-    font-family: 'Montserrat';
+    font-family: 'Oswald', sans-serif;
     box-sizing: padding-box;
 }
 
@@ -22,12 +20,16 @@ form {
     margin: auto;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
+input[type=text]{
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
 }
 
-input {
+input[type=password]{
     display: block;
     border: 2px solid #ccc;
     width: 95%;
@@ -37,12 +39,10 @@ input {
 }
 
 input[type=submit] {
-    float: right;
     background: #2196f3;
     padding: 10px 15px;
     color: rgb(0, 0, 0);
     border-radius: 5px;
-    margin-right: 10px;
     border: none;
 }
 
@@ -50,60 +50,8 @@ input[type=submit]:hover {
     opacity: .7;
 }
 
-label {
-    color: rgb(92, 92, 92);
-    font-size: 18px;
-    padding: 10px;
-}
-
-button {
-    display: inline-block;
-    background: #2196f3;
-    padding: 10px 15px;
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    margin-right: 10px;
-    border: none;
-}
-
-button:hover{
-    opacity: .6;
-}
-
 .error {
    color: #ff0000;
-}
-
-h1 {
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-button {
-    background: #2196f3;
-    padding: 10px 15px;
-    color: rgb(0, 0, 0);
-    border-radius: 0px;
-    margin-right: 10px;
-    border: none;
-    text-decoration: none;
-}
-
-button:hover{
-    opacity: .7;
-}
-
-#container{
-    text-align: center;
-}
-
-#entrypage {
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -60%);
-    transform: translate(-50%, -60%);
 }
 
 
@@ -132,17 +80,18 @@ li a:hover {
     background-color: #9fa2a3;
 }
 
-.button {
+button {
     background: #2196f3;
+    width: 150px;
     padding: 10px 15px;
     color: rgb(0, 0, 0);
-    border-radius: 0px;
+    border-radius: 5px;
     margin-right: 10px;
-    border: none;
+    border: 1px;
     text-decoration: none;
 }
 
-.button:hover {
+button:hover {
     opacity: .7;
 }
 
@@ -160,4 +109,19 @@ li a:hover {
     left: 50%;
     -ms-transform: translate(-50%, -60%);
     transform: translate(-50%, -60%);
+}
+
+.splash {
+    width: 25%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.insplash {
+    text-align: center;
+    margin: auto;
 }
