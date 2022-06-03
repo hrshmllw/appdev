@@ -14,8 +14,8 @@ include("config.php");
         <div class="insplash">
             <span style="font-size: 50px">Welcome</span>
             <br>
-            <button type="button"><a href="login.php" style="font-size: 16px;">Login</a></button>
-            <button type="button"><a href="register.php" style="font-size: 16px;">Register</a></button>
+            <button type="button" onclick="window.location.href='login.php'">Login</button>
+            <button type="button" onclick="window.location.href='register.php'">Register</button>
         </div>
 
     </div>

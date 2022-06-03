@@ -1,5 +1,5 @@
 <?php
-header("refresh:3; url=index.php");
+header("refresh:3; url=home.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ header("refresh:3; url=index.php");
         <link rel="stylesheet" type="text/css" href="Styles.css"/>
     </head>
     <center>
-        <h1>Registered successfully.</h1>
+        <h1>Logged in.</h1>
 
         <br>
         <br>

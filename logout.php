@@ -1,4 +1,10 @@
 <?php
+session_start();
+unset($_SESSION["email"]);
+
+session_unset();
+session_destroy();
+
 header("refresh:3; url=index.php");
 ?>
 
@@ -9,7 +15,7 @@ header("refresh:3; url=index.php");
         <link rel="stylesheet" type="text/css" href="Styles.css"/>
     </head>
     <center>
-        <h1>Registered successfully.</h1>
+        <h1>Logging out.</h1>
 
         <br>
         <br>
