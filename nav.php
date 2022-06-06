@@ -6,11 +6,12 @@ include("config.php");
 
 <html>
     <link rel="stylesheet" type="text/css" href="Styles.css"/>
-    <ul>
-        <a href="index.php"><img src="logo.png" alt="Tasks" style="width: 45px; height: 45px;"></a>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="home.php">Home</a></li>
+    <ul id="menu">
+        <a href="home.php"><img src="logo.png" alt="Tasks" style="width: 45px; height: 45px;"></a>
+        <li class="menuitem"><a href="contact.php">Contact</a></li>
+        <li class="menuitem"><a href="about.php">About</a></li>
+        <li class="menuitem"><a href="home.php">Account</a></li>
+        <li class="menuitem"><a href="index.php">Home</a></li>
 
     </ul>
 </html>

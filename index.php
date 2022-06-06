@@ -1,6 +1,11 @@
 <?php
+session_start();
 include("nav.php");
 include("config.php");
+if(isset($_SESSION["email"])){
+    $email = $_SESSION["email"];
+    echo "<script>window.location.href='home.php';</script>";
+}
 ?>
 
 <!DOCTYPE html>

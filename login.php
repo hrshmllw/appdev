@@ -4,7 +4,6 @@ include("nav.php");
 include("config.php");
 if(isset($_SESSION["email"])){
     $email = $_SESSION["email"];
-
     echo "<script>window.location.href='logging.php';</script>";
 }
 

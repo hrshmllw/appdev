@@ -55,7 +55,7 @@ input[type=submit]:hover {
 }
 
 
-ul {
+#menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -63,11 +63,8 @@ ul {
     background-color: #babcbd;
 }
 
-li {
+.menuitem {
     float: right;
-}
-
-li a {
     display: block;
     padding: 8px;
     text-align: center;
@@ -76,7 +73,7 @@ li a {
     border: 1px;
 }
 
-li a:hover {
+.menuitem:hover {
     background-color: #9fa2a3;
 }
 
@@ -124,5 +121,53 @@ button:hover {
 
 .insplash {
     text-align: center;
+    margin: auto;
+}
+
+.items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.items .donebutton {
+    display: inline-block;
+    background-color: #d9dfe1;
+    font-size: 0.8em;
+    color: #363639;
+    padding: 3px 6px;
+    border: 0;
+    opacity: 0.4;
+}
+
+.items .donebutton:hover {
+    opacity: 1;
+}
+
+.list {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.items li {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    padding: 15px 0;
+}
+
+.items .itemdone {
+    text-decoration: line-through;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.submit {
+    font-size: 0.9em;
+    width: 100%;
     margin: auto;
 }

@@ -114,7 +114,7 @@ if(isset($_POST["button_register"])){
     <br>
     <br>
 
-    <form method="POST">
+    <form method="POST" class="regform">
         <fieldset>
             <legend>Information</legend>
                 <tr>
