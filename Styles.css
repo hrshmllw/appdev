@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
 
 body {
-    background-color: #babcbd;
+    background-color: #fff;
 }
 
 *{
@@ -60,7 +60,8 @@ input[type=submit]:hover {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #babcbd;
+    background-color: #fff;
+
 }
 
 .menuitem {
@@ -69,12 +70,13 @@ input[type=submit]:hover {
     padding: 8px;
     text-align: center;
     text-decoration: none;
-    background-color: #babcbd;
+    background-color: #fff;
+    opacity: 0.8;
     border: 1px;
 }
 
 .menuitem:hover {
-    background-color: #9fa2a3;
+    opacity: 1;
 }
 
 button {
