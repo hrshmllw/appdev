@@ -19,8 +19,7 @@ if(isset($_SESSION["email"])){
         <div class="insplash">
             <span style="font-size: 50px">Welcome</span>
             <br>
-            <button type="button" onclick="window.location.href='login.php'">Login</button>
-            <button type="button" onclick="window.location.href='register.php'">Register</button>
+            <button type="button" onclick="window.location.href='register.php'">Get started</button>
         </div>
 
     </div>

@@ -173,3 +173,90 @@ button:hover {
     width: 100%;
     margin: auto;
 }
+
+#deadcenter{
+	position:absolute;
+	top:50%;
+	width:980px;
+	height:1px;
+	background: none;
+}
+
+#main-container{
+	border:0;
+	width:1500px;
+	height:750px;
+	margin:0 auto;
+	position:relative;
+}
+
+.box{
+    position:absolute;
+	width:250px;
+	height:150px;
+	background:transparent;
+	border:0px solid black;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+#topleft{
+	margin:0 auto;
+	top:50%;
+	left:50%;
+	margin-top:-160px;
+	margin-left:-260px;
+}
+
+#topleftbutton{
+    width:250px;
+	height:150px;
+    background: #e3f2fd url("images/todolist.png") 10px 10px no-repeat;
+    background-size: 40px 40px;
+}
+
+#topright{
+	margin:0 auto;
+	top:50%;
+	left:50%;
+	margin-top:-160px;
+	margin-left:10px;
+}
+
+#toprightbutton{
+    width:250px;
+	height:150px;
+    background: #e3f2fd url("images/calendar.png") 10px 10px no-repeat;
+    background-size: 40px 40px;
+}
+
+#bottomleft{
+	margin:0 auto;
+	top:50%;
+	left:50%;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+#bottomleftbutton{
+    width:250px;
+	height:150px;
+    background: #e3f2fd url("images/spreadsheet.png") 10px 10px no-repeat;
+    background-size: 40px 40px;
+}
+
+#bottomright{
+	margin:0 auto;
+	top:50%;
+	left:50%;
+	margin-top:10px;
+	margin-left:-260px;
+}
+
+#bottomrightbutton{
+    width:250px;
+	height:150px;
+    background: #e3f2fd url("images/notes.png") 10px 10px no-repeat;
+    background-size: 40px 40px;
+}
