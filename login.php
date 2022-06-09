@@ -74,6 +74,7 @@ if(isset($_POST["login"])){
 <html>
     <head>
         <title>Login</title>
+        <link rel="stylesheet" href="bootstrap.css"/>
     </head>
 
     <form method="POST" class="loginform">

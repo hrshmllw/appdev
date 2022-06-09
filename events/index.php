@@ -3,6 +3,7 @@ session_start();
 if(isset($_SESSION["email"])){
     $email = $_SESSION["email"];
 }
+include("nav.php");
 ?>
 
 <!DOCTYPE html>
@@ -113,9 +114,8 @@ if(isset($_SESSION["email"])){
     </head>
     <body>
         <br>
-        <h2 align="center"><a href="#">Calendar</a></h2>
-        <br>
         <div class="container">
+            <a href="../home.php">< Back to homepage</a>
             <div id="calendar"></div>
         </div>
     </body>

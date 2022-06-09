@@ -146,20 +146,6 @@ button:hover {
     opacity: 1;
 }
 
-.items .deletebutton {
-    float: right;
-    background-color: #d9dfe1;
-    font-size: 0.8em;
-    color: #363639;
-    padding: 3px 6px;
-    border: 0;
-    opacity: 0.4;
-}
-
-.items .deletebutton:hover {
-    opacity: 1;
-}
-
 .list {
     margin: 20px auto;
     width: 100%;
@@ -228,7 +214,6 @@ button:hover {
 	height:150px;
     background: #e3f2fd url("images/todolist.png") 10px 10px no-repeat;
     background-size: 40px 40px;
-    border: 1px solid black;
 }
 
 #topright{
@@ -244,7 +229,6 @@ button:hover {
 	height:150px;
     background: #e3f2fd url("images/calendar.png") 10px 10px no-repeat;
     background-size: 40px 40px;
-    border: 1px solid black;
 }
 
 #bottomleft{
@@ -260,7 +244,6 @@ button:hover {
 	height:150px;
     background: #e3f2fd url("images/spreadsheet.png") 10px 10px no-repeat;
     background-size: 40px 40px;
-    border: 1px solid black;
 }
 
 #bottomright{
@@ -276,5 +259,4 @@ button:hover {
 	height:150px;
     background: #e3f2fd url("images/notes.png") 10px 10px no-repeat;
     background-size: 40px 40px;
-    border: 1px solid black;
 }

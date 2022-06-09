@@ -110,6 +110,7 @@ if(isset($_POST["button_register"])){
 <html>
     <head>
         <title>Registration</title>
+        <link rel="stylesheet" href="bootstrap.css"/>
     </head>
     <br>
     <br>

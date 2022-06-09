@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("config.php");
+include("../config.php");
 include("nav.php");
 
 if(isset($_SESSION["email"])){
@@ -43,11 +43,12 @@ if(isset($_POST["add_task"])){
 <html>
     <head>
         <title>To-do list</title>
+        <link rel="stylesheet" href="bootstrap.css"/>
     </head>
 
     <body>
         <div class="list">
-            <a href="home.php">< Back to homepage</a>
+            <a href="../home.php">< Back to homepage</a>
             <form method="POST" class="additem">
                 <fieldset>
                     <legend>To-do list</legend>
@@ -68,8 +69,10 @@ if(isset($_POST["add_task"])){
                                 <span class="item<?php echo $item['done'] ? 'done' : '' ?>"><?php echo $item['task'];?></span>
                                 <?php if(!$item['done']): ?>
                                     <a href="mark.php?as=done&item=<?php echo $item['id']; ?>" class="donebutton">Mark as done</a>
+                                    <a href="delete.php?as=delete&item=<?php echo $item['id']; ?>" class="deletebutton">Delete</a>
                                 <?php else: ?>
                                     <a href="mark.php?as=undone&item=<?php echo $item['id']; ?>" class="donebutton">Undo</a>
+                                    <a href="delete.php?as=delete&item=<?php echo $item['id']; ?>" class="deletebutton">Delete</a>
                                 <?php endif; ?>
                             </li>
                         <?php endforeach; ?>

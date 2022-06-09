@@ -1,6 +1,6 @@
 <?php
-include("config.php");
-include("home.php");
+include("../config.php");
+include("../home.php");
 
 if(isset($_GET['as'], $_GET['item'])){
     $as = $_GET['as'];
@@ -17,5 +17,5 @@ if(isset($_GET['as'], $_GET['item'])){
     }
     echo "<meta http-equiv='refresh' content='0'>";
 }
-header("Location: home.php");
+header("Location: index.php");
 ?>

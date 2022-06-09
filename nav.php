@@ -11,7 +11,7 @@ if(isset($_SESSION["email"])){
             <a href="index.php"><img src="logo.png" alt="Tasks" style="width: 45px; height: 45px;"></a>
             <li class="menuitem"><a href="logout.php">Logout</a></li>
             <li class="menuitem"><a href="account.php">Account</a></li>
-            <li class="menuitem"><a href="index.php">Home</a></li>
+            <li class="menuitem"><a href="home.php">Home</a></li>
     
         </ul>
     </html>';
