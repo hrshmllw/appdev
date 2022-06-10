@@ -3,8 +3,8 @@ session_start();
 include("../config.php");
 include("nav.php");
 
-if(isset($_SESSION["email"])){
-    $email = $_SESSION["email"];
+if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
 } else{
     die("<center><span style='font-size: 35px';>You are not signed in.</span>
     <br>
@@ -14,7 +14,7 @@ if(isset($_SESSION["email"])){
 
 $itemsQuery = $db->prepare("SELECT id, user, task, done FROM tasks WHERE user = :user");
 
-$itemsQuery->execute(['user' => $_SESSION["email"]]);
+$itemsQuery->execute(['user' => $_SESSION["username"]]);
 
 $items = $itemsQuery->rowCount() ? $itemsQuery : [];
 
@@ -32,7 +32,7 @@ if(isset($_POST["add_task"])){
 
     if(empty($taskErr)){
         mysqli_query($connections, "INSERT INTO tasks(user, task, done, created)
-        VALUES('$email', '$task', '0', '$date_created')");
+        VALUES('$username', '$task', '0', '$date_created')");
     }
     echo "<meta http-equiv='refresh' content='0'>";
 }
@@ -43,17 +43,17 @@ if(isset($_POST["add_task"])){
 <html>
     <head>
         <title>To-do list</title>
-        <link rel="stylesheet" href="bootstrap.css"/>
+        <link rel="stylesheet" href="../bootstrap.css"/>
     </head>
 
     <body>
         <div class="list">
-            <a href="../home.php">< Back to homepage</a>
+            <a href="../home.php">< Back</a>
             <form method="POST" class="additem">
                 <fieldset>
                     <legend>To-do list</legend>
                     <?php
-                    echo "<span>User: $email</span>";
+                    echo "<span>User: $username</span>";
                     ?>
                     <form>
                         <input type="text" name="task" placeholder="Enter a new task." class="input" autocomplete="off" required>

@@ -99,16 +99,10 @@ button:hover {
     display: flexbox;
     width: 500px;
     border: 3px solid rgb(0, 0, 0);
-    padding: 20px;
     background: #e3f2fd;
     border-radius: 10px;
     align-items: center;
     margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -60%);
-    transform: translate(-50%, -60%);
 }
 
 .splash {
@@ -165,6 +159,13 @@ button:hover {
     width: 100%;
     max-width: 1000px;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+.logindiv {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
     box-sizing: border-box;
 }
 

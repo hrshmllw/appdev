@@ -4,8 +4,8 @@ $connect = new PDO('mysql: host=localhost;dbname=appdev', 'root', '');
 session_start();
 include("../config.php");
 
-if(isset($_SESSION["email"])){
-    $email = $_SESSION["email"];
+if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
 } else{
     die("<center><span style='font-size: 35px';>You are not signed in.</span>
     <br>
@@ -19,7 +19,7 @@ if(isset($_POST["title"])){
     $statement = $connect->prepare($query);
     $statement->execute(
         array(
-            ':user' => $_SESSION['email'],
+            ':user' => $_SESSION['username'],
             ':title' => $_POST['title'],
             ':start_event' => $_POST['start'],
             ':end_event' => $_POST['end']

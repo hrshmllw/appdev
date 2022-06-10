@@ -7,6 +7,7 @@ header("refresh:3; url=index.php");
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="Styles.css"/>
+        <link rel="stylesheet" href="bootstrap.css"/>
     </head>
     <center>
         <h1>Registered successfully.</h1>

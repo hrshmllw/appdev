@@ -1,7 +1,7 @@
 <?php
 include("config.php");
-if(isset($_SESSION["email"])){
-    $email = $_SESSION["email"];
+if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
     echo '
     <!DOCTYPE html>
     
@@ -10,7 +10,7 @@ if(isset($_SESSION["email"])){
         <ul id="menu">
             <a href="index.php"><img src="logo.png" alt="Tasks" style="width: 45px; height: 45px;"></a>
             <li class="menuitem"><a href="logout.php">Logout</a></li>
-            <li class="menuitem"><a href="account.php">Account</a></li>
+            <li class="menuitem"><a href="account/index.php">Account</a></li>
             <li class="menuitem"><a href="home.php">Home</a></li>
     
         </ul>

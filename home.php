@@ -3,8 +3,8 @@ session_start();
 include("config.php");
 include("nav.php");
 
-if(isset($_SESSION["email"])){
-    $email = $_SESSION["email"];
+if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
 }
 ?>
 

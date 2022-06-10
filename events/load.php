@@ -5,8 +5,8 @@ $data = array();
 session_start();
 include("../config.php");
 
-if(isset($_SESSION["email"])){
-    $email = $_SESSION["email"];
+if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
 } else{
     die("<center><span style='font-size: 35px';>You are not signed in.</span>
     <br>
@@ -14,7 +14,7 @@ if(isset($_SESSION["email"])){
     </center>");
 }
 
-$query = "SELECT * FROM events WHERE user = '$email'";
+$query = "SELECT * FROM events WHERE user = '$username'";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();

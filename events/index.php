@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION["email"])){
-    $email = $_SESSION["email"];
+if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
 }
 include("nav.php");
 ?>
@@ -11,7 +11,7 @@ include("nav.php");
     <head>
         <title>Calendar</title>
         <link rel="stylesheet" href="fullcalendar.css"/>
-        <link rel="stylesheet" href="bootstrap.css"/>
+        <link rel="stylesheet" href="../bootstrap.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -115,7 +115,7 @@ include("nav.php");
     <body>
         <br>
         <div class="container">
-            <a href="../home.php">< Back to homepage</a>
+            <a href="../home.php">< Back</a>
             <div id="calendar"></div>
         </div>
     </body>
