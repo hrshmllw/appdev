@@ -75,14 +75,14 @@ if(isset($_POST["button_register"])){
         if(!preg_match("/^[a-zA-Z ]*$/", $last_name)){
             $last_nameErr = "Only alphabetic characters are allowed.";
         }
-        if($count_first_name_string < 2){
-            $first_nameErr = "Minimum of 3 characters required.";
+        if($count_first_name_string <= 1){
+            $first_nameErr = "Minimum of 2 characters required.";
         }
-        if($count_middle_name_string < 2){
-            $middle_nameErr = "Minimum of 3 characters required.";
+        if($count_middle_name_string <= 1){
+            $middle_nameErr = "Minimum of 2 characters required.";
         }
-        if($count_last_name_string < 2){
-            $last_nameErr = "Minimum of 3 characters required.";
+        if($count_last_name_string <= 1){
+            $last_nameErr = "Minimum of 2 characters required.";
         }
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $emailErr = "Invalid email format.";

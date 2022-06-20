@@ -26,12 +26,16 @@ if(isset($_POST["update_button"])){
         $new_emailErr = "This field must not be empty.";
     } else{
         $new_email = $_POST["new_email"];
-        $db_email = $new_email;
     }
 
-    if(empty($new_emailErr)){
-        mysqli_query($connections, "UPDATE users SET email = '$db_email' WHERE username = '$username'");
-        echo "<script>window.location.href='index.php';</script>";
+    if($new_email){
+        if(!filter_var($new_email, FILTER_VALIDATE_EMAIL)){
+            $new_emailErr = "Invalid email format.";
+        } elseif(empty($new_emailErr)){
+            $db_email = $new_email;
+            mysqli_query($connections, "UPDATE users SET email = '$db_email' WHERE username = '$username'");
+            echo "<script>window.location.href='index.php';</script>";
+        }
     }
 }
 ?>

@@ -27,7 +27,7 @@ if(isset($_SESSION["username"])){
                 <button id="bottomleftbutton" onclick="window.location.href='#'"><span style="font-size: 25px; font-weight:400">Spreadsheets</span></button>
             </div>
             <div class='box' id='bottomright'>
-                <button id="bottomrightbutton" onclick="window.location.href='#'"><span style="font-size: 25px; font-weight:400">Notes</span></button>
+                <button id="bottomrightbutton" onclick="window.location.href='notes/index.php'"><span style="font-size: 25px; font-weight:400">Notes</span></button>
             </div>
             <div id='deadcenter'></div>
         </div>

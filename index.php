@@ -19,7 +19,7 @@ if(isset($_SESSION["username"])){
         <div class="insplash">
             <span style="font-size: 50px">Welcome</span>
             <br>
-            <?php if(isset($_SESSION['email'])): ?>
+            <?php if(isset($_SESSION['username'])): ?>
                 <button type="button" onclick="window.location.href='home.php'">Get started</button>
             <?php else: ?>
                 <button type="button" onclick="window.location.href='register.php'">Get started</button>

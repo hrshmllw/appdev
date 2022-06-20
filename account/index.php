@@ -88,7 +88,7 @@ $full_name = $db_first_name . " " . $db_middle_name . " " . $db_last_name;
                     <tr>
                         <td>
                             <br>
-                            <a href="#">Update information</a><span style="float: right;"><a href="#">Delete account</a></span>
+                            <a href="update_info.php">Update information</a><span style="float: right;"><a href="confirm_delete.php">Delete account</a></span>
                         </td>
                     </tr>
                 </fieldset>
