@@ -269,7 +269,7 @@ button:hover {
 	top:50%;
 	left:50%;
 	margin-top:10px;
-	margin-left:-260px;
+	margin-left:-135px;
 }
 
 #bottomrightbutton{
@@ -278,4 +278,59 @@ button:hover {
     background: #e3f2fd url("images/notes.png") 10px 10px no-repeat;
     background-size: 40px 40px;
     border: 1px solid black;
+}
+
+
+.new-note{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.new-note input,
+.new-note textarea,
+.new-note button{
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+
+}
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.note {
+    color: black;
+    width: 500px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    min-height: 100px;
+    word-wrap: break-word;
+}
+.note .title{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.note .title a {
+    color: black;
+}
+.note .close {
+    font-family: Arial;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+}
+.note small {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+    font-style: italic;
 }

@@ -23,9 +23,9 @@ if(isset($_SESSION["username"])){
             <div class='box' id='topright'>
                 <button id="toprightbutton" onclick="window.location.href='events/index.php'"><span style="font-size: 25px; font-weight:400">Calendar</span></button>
             </div>
-            <div class='box' id='bottomleft'>
+            <!--<div class='box' id='bottomleft'>
                 <button id="bottomleftbutton" onclick="window.location.href='#'"><span style="font-size: 25px; font-weight:400">Spreadsheets</span></button>
-            </div>
+            </div> -->
             <div class='box' id='bottomright'>
                 <button id="bottomrightbutton" onclick="window.location.href='notes/index.php'"><span style="font-size: 25px; font-weight:400">Notes</span></button>
             </div>

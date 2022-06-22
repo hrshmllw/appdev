@@ -12,30 +12,35 @@ if(isset($_SESSION["username"])){
     </center>");
 }
 
-$itemsQuery = $db->prepare("SELECT id, user, task, done FROM tasks WHERE user = :user");
+$itemsQuery = $db->prepare("SELECT id, user, title, description, create_date FROM notes WHERE user = :user");
 
 $itemsQuery->execute(['user' => $_SESSION["username"]]);
 
-$items = $itemsQuery->rowCount() ? $itemsQuery : [];
+$notes = $itemsQuery->rowCount() ? $itemsQuery : [];
 
-$task = "";
-$taskErr = "";
+$title = $description = "";
+$titleErr = $descriptionErr = "";
 date_default_timezone_set("Asia/Manila");
 $date_created = date("m/d/Y h:i:s a");
 
-if(isset($_POST["add_task"])){
-    if(empty($_POST["task"])){
-        $taskErr = "Enter a task.";
+if(isset($_POST["add_note"])){
+    if(empty($_POST["title"])){
+        $titleErr = "Enter a task.";
     } else{
-        $task = $_POST["task"];
+        $title = $_POST["title"];
     }
 
-    if(empty($taskErr)){
-        mysqli_query($connections, "INSERT INTO tasks(user, task, done, created)
-        VALUES('$username', '$task', '0', '$date_created')");
+    $description = $_POST["description"];
+
+    if(empty($titleErr)){
+        mysqli_query($connections, "INSERT INTO notes(user, title, description, create_date)
+        VALUES('$username', '$title', '$description', '$date_created')");
     }
     echo "<meta http-equiv='refresh' content='0'>";
 }
+
+$colors = array("ff7eb9", "ff65a3", "7afcff", "feff9c", "fff740");
+
 ?>
 
 <!DOCTYPE html>
@@ -45,43 +50,32 @@ if(isset($_POST["add_task"])){
         <title>Notes</title>
         <link rel="stylesheet" href="../bootstrap.css"/>
     </head>
-
     <body>
-        <div class="list">
-            <a href="../home.php">< Back</a>
-            <form method="POST" class="additem">
-                <fieldset>
-                    <legend>Notes</legend>
-                    <?php
-                    echo "<span>User: $username</span>";
-                    ?>
-                    <form>
-                        <input type="text" name="task" placeholder="Enter a new task." class="input" autocomplete="off" required>
-                        <input type="submit" name="add_task" value="Add to list" class="submit">
+        <div class="new-note">
+        <a href="../home.php">< Back</a>
+        <form class="new-note" method="POST">
+            <fieldset>
+                <input type="text" name="title" placeholder="Note title" autocomplete="off" required>
+                <textarea name="description" rows="5" placeholder="Note description"></textarea>
+                <input type="submit" name="add_note" value="New note">
+            </fieldset>
+        </form>
+        </div>
+        <div class="notes">
+            <?php foreach ($notes as $note): ?>
+                <div class="note" style="background-color: #<?php echo $colors[array_rand($colors)]; ?>">
+                    <div class="title">
+                        <?php echo $note['title'] ?>
+                    </div>
+                    <div class="description">
+                        <?php echo nl2br($note['description']) ?>
+                    </div>
+                    <small><?php echo date('d/m/Y H:i', strtotime($note['create_date'])) ?></small>
+                    <input type="hidden" name="id" value="<?php echo $note['id'] ?>">
+                    <a href="delete.php?as=delete&item=<?php echo $note['id']; ?>" class="close">X</a>
                     </form>
-
-                    <hr>
-
-                    <?php if(!empty($items)) : ?>
-                    <ul class="items">
-                        <?php foreach($items as $item): ?>
-                            <li>
-                                <span class="item<?php echo $item['done'] ? 'done' : '' ?>"><?php echo $item['task'];?></span>
-                                <?php if(!$item['done']): ?>
-                                    <a href="mark.php?as=done&item=<?php echo $item['id']; ?>" class="donebutton">Mark as done</a>
-                                    <a href="delete.php?as=delete&item=<?php echo $item['id']; ?>" class="deletebutton">Delete</a>
-                                <?php else: ?>
-                                    <a href="mark.php?as=undone&item=<?php echo $item['id']; ?>" class="donebutton">Undo</a>
-                                    <a href="delete.php?as=delete&item=<?php echo $item['id']; ?>" class="deletebutton">Delete</a>
-                                <?php endif; ?>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <?php else: ?>
-                        There are no items on your list.
-                    <?php endif; ?>
-                </fieldset>
-            </form>
+                </div>
+            <?php endforeach ?>
         </div>
     </body>
 </html>
