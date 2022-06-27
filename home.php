@@ -5,6 +5,11 @@ include("nav.php");
 
 if(isset($_SESSION["username"])){
     $username = $_SESSION["username"];
+} else{
+    die("<center><span style='font-size: 35px';>You are not signed in.</span>
+    <br>
+    <span style='font-size: 12px';><a href='index.php'>Return to homepage</a></span>
+    </center>");
 }
 ?>
 
